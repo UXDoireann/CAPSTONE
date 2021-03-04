@@ -27,3 +27,11 @@ function listening(){
     console.log("server running");
     console.log(`running on localhost:${port}`);
 };
+
+//Other dependencies
+var path = require('path');
+
+//GET request
+app.get('/', function (req, res) {
+ res.sendFile(path.resolve('src/client/views/index.html'))
+ })
