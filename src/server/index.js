@@ -33,7 +33,7 @@ var path = require('path');
 
 //GET request
 app.get('/', function (req, res) {
- res.sendFile(path.resolve('src/client/views/index.html'))
+ res.sendFile('dist/index.html')
  })
 
  
