@@ -6,6 +6,9 @@ module.exports = {
     mode:'development',
     devtool:'source-map',
     entry: './src/client/index.js',
+    devServer:{
+      port:5000
+    },
     module: {
         rules: [
                 {
