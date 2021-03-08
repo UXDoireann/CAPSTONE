@@ -10,6 +10,10 @@ module.exports = {
     devServer:{
       port:5000
     },
+    output: {
+      libraryTarget: 'var',
+      library: 'Client'
+  },
     module: {
         rules: [
                 {

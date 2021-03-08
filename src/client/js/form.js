@@ -6,16 +6,16 @@ document.getElementById('submit').addEventListener('click', Client.handleSubmit)
 function handleSubmit(event){
     event.preventDefault()
 
-let formText = document.getElementById('city').nodeValue;
+let formText = document.getElementById('city').value;
 Client.checkForCity(formText)
 console.log("Form Submitted")
 
-fetch('http://localhost:5051/test')
+fetch('http://localhost:5050/test')
 .then(res =>{
     return res.json()
 })
 .then(function(data){
-    document.getElementById('results').innerHTML = res.body;
+    document.getElementById('results').innerHTML = data.message;
 })
 }
 
