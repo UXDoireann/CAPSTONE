@@ -18,7 +18,12 @@ fetch('http://localhost:5050/addData', {
 })
 .then(res => res.json())
 .then(function(res){
-    document.getElementById('results').innerHTML = res.body;
+    const country = res.geonames[0].countryName;
+    const countryCode = res.geonames[0].countryCode;
+    const lat = res.geonames[0].lat;
+    const long = res.geonmames[0].lng;
+    document.getElementById('results').innerHTML = country;
+    console.log(countryName, countryCode, lat, long);
 })
 }
 

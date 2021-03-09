@@ -42,9 +42,9 @@ app.get('/', function (req, res) {
 
  //Variables for GEONAMES call
 let baseGeoUrl = 'http://api.geonames.org/searchJSON?q=';
-const userName = process.env.USERNAME;
+const userName = process.env.GEO_KEY;
 
-console.log(`Your API key is ${process.env.USERNAME}`);
+console.log(`Your API key is ${process.env.GEO_KEY}`);
 
 //GEONAMES fetch request
 app.post("/addData", async(req, res)=>{
