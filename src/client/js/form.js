@@ -16,10 +16,8 @@ fetch('http://localhost:5050/addData', {
         },
         body:JSON.stringify({formText: formText})
 })
-.then(res =>{
-    return res.json()
-})
-.then(function(data){
+.then(res => res.json())
+.then(function(res){
     document.getElementById('results').innerHTML = res.body;
 })
 }
