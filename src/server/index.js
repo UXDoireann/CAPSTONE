@@ -1,4 +1,4 @@
-projectData={};
+
 
 //Express to run server
 const express = require('express');
@@ -46,6 +46,9 @@ const userName = process.env.GEO_KEY;
 
 console.log(`Your API key is ${process.env.GEO_KEY}`);
 
+//Object to hold GEONAMES data in
+projectData={};
+
 //GEONAMES fetch request
 app.post("/addData", async(req, res)=>{
     const getCity = await fetch(`${baseGeoUrl}${req.body.formText}&maxRows=1&username=${userName}`,{
@@ -53,8 +56,12 @@ app.post("/addData", async(req, res)=>{
     });
     try{
         const data = await getCity.json();
-        console.log(getCity, data)
-        res.send(data);
+        projectData['country'] = data.geonames[0].countryName;
+        projectData['code'] = data.geonames[0].countryCode;
+        projectData['lat'] = data.geonames[0].lat;
+        projectData['long'] = data.geonames[0].lng;
+       console.log(projectData);
+        res.send(projectData);
     }catch(error){
         console.log("error", error);
 }
