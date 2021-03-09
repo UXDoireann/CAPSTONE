@@ -10,7 +10,7 @@ let formText = document.getElementById('city').value;
 Client.checkForCity(formText)
 console.log("Form Submitted")
 
-fetch('http://localhost:5050/test')
+fetch('http://localhost:5050/addData')
 .then(res =>{
     return res.json()
 })

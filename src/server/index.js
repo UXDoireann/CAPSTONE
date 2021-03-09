@@ -30,10 +30,37 @@ function listening(){
 
 //Other dependencies
 var path = require('path');
+const fetch = require('node-fetch');
+const dotenv = require('dotenv');
+dotenv.config();
+
 
 //GET request
 app.get('/', function (req, res) {
  res.sendFile('dist/index.html')
  })
+
+ //Variables for GEONAMES call
+let baseGeoUrl = 'http://api.geonames.org/searchJSON?q=';
+const userName = process.env.USERNAME;
+
+console.log(`Your API key is ${process.env.USERNAME}`);
+
+//GEONAMES fetch request
+app.post("/addData", async(req, res)=>{
+    const getCity = await fetch(`${baseGeoUrl}${req.body.formText}&maxRows=1&username=${userName}`,{
+        method: 'POST'
+    });
+    try{
+        const data = await getCity.json();
+        console.log(getCity, data)
+        res.send(data);
+    }catch(error){
+        console.log("error", error);
+}
+
+});
+
+
 
  
