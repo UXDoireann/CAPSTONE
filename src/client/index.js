@@ -1,5 +1,7 @@
-import{handleSubmit} from './js/check.js'
+import{handleSubmit} from './js/form.js'
 
+//Event Listener for Form Submission
+document.getElementById('dreams').addEventListener('click', handleSubmit);
 
 
 import './styles/card.scss'

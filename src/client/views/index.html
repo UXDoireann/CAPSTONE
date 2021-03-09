@@ -21,7 +21,7 @@
 
             <form id="where">
                 <input id="city" type="text" name="input" placeholder="Where do you wish you were going?"></br>
-                <input type ="submit" id="dreams" value="In my dreams...">
+                <button type ="button" id="dreams">Find info</button>
             </form>
 
             <div id="results">
@@ -34,13 +34,7 @@
         <footer>
             <p>2021 by Doireann Ni Ghrioghair</p>
         </footer>
-        <script>
-            if('serviceWorker' in navigator){
-                window.addEventListener('load', () =>{
-                    navigator.serviceWorker.register('/service-worker.js');
-                });
-            }
-        </script>
+        
     </body>
    
 </html>

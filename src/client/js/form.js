@@ -1,21 +1,26 @@
 
-//Event Listener for Form Submission
-document.getElementById('submit').addEventListener('click', Client.handleSubmit);
 
 //HandleSubmit Function
 function handleSubmit(event){
     event.preventDefault()
 
 let formText = document.getElementById('city').value;
-Client.checkForCity(formText)
 console.log("Form Submitted")
 
-fetch('http://localhost:5050/addData')
+fetch('http://localhost:5050/addData', {
+    method: 'POST',
+        credentials: 'same-origin',
+       mode: 'cors',
+        headers:{
+            'Content-Type':'application/json',
+        },
+        body:JSON.stringify({formText: formText})
+})
 .then(res =>{
     return res.json()
 })
 .then(function(data){
-    document.getElementById('results').innerHTML = data.message;
+    document.getElementById('results').innerHTML = res.body;
 })
 }
 
