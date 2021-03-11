@@ -17,7 +17,17 @@ function dateCount(e){
  let differenceInDays = differenceInTime/ (1000 * 3600 * 24); 
  console.log(differenceInDays);
 
- document.getElementById("countdown").innerHTML = Math.round(differenceInDays);
+ let countD = Math.round(differenceInDays);
+
+ if(countD === 0){
+     document.getElementById('countdown').innerHTML = "Your trip starts in a few hours!";
+ }else if(countD ===1){
+         document.getElementById('countdown').innerHTML = "Just one day left!";
+ }else if(countD>1){
+             document.getElementById('countdown').innerHTML = countD+" days left to departure date."
+         }
+     
+ 
  
 }
 
