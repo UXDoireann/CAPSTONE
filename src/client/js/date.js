@@ -12,6 +12,12 @@ function dateCount(e){
  let date2 = new Date(travelDate);
  let travelTime = date2.getTime();
  console.log(travelTime);
+
+ let differenceInTime = travelTime - today;
+ let differenceInDays = differenceInTime/ (1000 * 3600 * 24); 
+ console.log(differenceInDays);
+
+ document.getElementById("countdown").innerHTML = Math.round(differenceInDays);
  
 }
 
