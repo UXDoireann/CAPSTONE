@@ -68,6 +68,17 @@ app.post("/addData", async(req, res)=>{
 
 });
 
+//Post Request for date
+app.post('/addDate', addDate);
 
+function addDate(req, res){
+   let data = req.body;
+   newEntry ={
+       date: data.travelDate
+       }
+   Object.assign(projectData, newEntry);
+   res.send(projectData);
+   console.log(projectData);
+    };
 
  
