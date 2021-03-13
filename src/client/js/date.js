@@ -1,3 +1,5 @@
+import fetch from "node-fetch";
+
 // Create a new date instance dynamically with JS
 let d = new Date();
 let today = d.getTime();

@@ -44,7 +44,13 @@ app.get('/', function (req, res) {
 let baseGeoUrl = 'http://api.geonames.org/searchJSON?q=';
 const userName = process.env.GEO_KEY;
 
-console.log(`Your API key is ${process.env.GEO_KEY}`);
+console.log(`Your GEONAMES username is ${process.env.GEO_KEY}`);
+
+//Variables for WeatherBit call
+let baseWeatherUrl = 'http://api.weatherbit.io/v2.0/forecast/daily?';
+const apiKey = process.env.WEATHER_BIT_API;
+
+console.log(`Your WeatherBit API key is ${process.env.WEATHER_BIT_API}`);
 
 //Object to hold GEONAMES data in
 projectData={};
@@ -82,4 +88,17 @@ function addDate(req, res){
    console.log(projectData);
     };
 
- 
+ //WeatherBit Fetch 
+ app.post("/addWeather", async(req, res)=>{
+    const getWeather = await fetch(`${baseWeatherUrl}lat=${projectData.lat}&lon=${projectData.long}&days=${projectData.newEntry.days}&key=${apiKey}`,{
+        method: 'POST'
+    });
+    try{
+        const data = await getWeather.json();
+        console.log(data);
+        res.send(data);
+    }catch(error){
+        console.log("error", error);
+}
+
+});
