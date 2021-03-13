@@ -68,9 +68,9 @@ document.getElementById('weather').innerHTML = data.data[days].weather.descripti
 console.log(data.data[days].weather.description)
 document.getElementById('temp').innerHTML = data.data[days].max_temp + "°C";
 console.log(data.data[days].temp);
-document.getElementById('icon').innerHTML = <img src="media/icons/${data.data[days].weather.icon}.png" alt="${data.data[days].weather.description}"></img>
+document.getElementById('icon').innerHTML = `<img src="./src/client/media/icons/${data.data[days].weather.icon}.png" alt= "${data.data[days].weather.description}"></img>`
 console.log(data.data[days].weather.icon)
-     }).then
+     })
      
 
 
