@@ -1,5 +1,6 @@
 import fetch from "node-fetch";
 
+
 // Create a new date instance dynamically with JS
 let d = new Date();
 let today = d.getTime();
@@ -67,7 +68,7 @@ document.getElementById('weather').innerHTML = data.data[days].weather.descripti
 console.log(data.data[days].weather.description)
 document.getElementById('temp').innerHTML = data.data[days].max_temp + "°C";
 console.log(data.data[days].temp);
-document.getElementById('icon').innerHTML = data.data[days].weather.icon;
+document.getElementById('icon').innerHTML = <img src="media/icons/${data.data[days].weather.icon}.png" alt="${data.data[days].weather.description}"></img>
 console.log(data.data[days].weather.icon)
      }).then
      
