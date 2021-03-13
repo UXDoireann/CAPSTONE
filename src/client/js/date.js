@@ -51,7 +51,7 @@ function dateCount(e){
     })
      .then(res=>res.json())
      .then(function(data){
-    
+    console.log(data.data);
 
      if(countD === 0){
      document.getElementById('countdown').innerHTML = "Your trip starts in a few hours!";

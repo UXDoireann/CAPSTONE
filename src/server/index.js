@@ -92,7 +92,7 @@ function addDate(req, res){
  //app.post('/addDate', addDate)
 
  app.post("/addDate", async(req, res)=>{
-    const getWeather = await fetch(`${baseWeatherUrl}lat=${projectData.lat}&lon=${projectData.long}&days=${req.body.countD}&key=${apiKey}`,{
+    const getWeather = await fetch(`${baseWeatherUrl}lat=${projectData.lat}&lon=${projectData.long}&days=${req.body.countD+2}&key=${apiKey}`,{
         method: 'POST'
     });
     try{
