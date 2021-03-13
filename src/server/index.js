@@ -74,7 +74,8 @@ app.post('/addDate', addDate);
 function addDate(req, res){
    let data = req.body;
    newEntry ={
-       date: data.travelDate
+       date: data.travelDate,
+       days: data.countD
        }
    Object.assign(projectData, newEntry);
    res.send(projectData);

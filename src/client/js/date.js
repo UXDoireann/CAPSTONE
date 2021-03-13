@@ -30,6 +30,14 @@ console.log(today);
 function dateCount(e){
     e.preventDefault()
     let travelDate = document.getElementById("date").value;
+    let date2 = new Date(travelDate);
+     let travelTime = date2.getTime();
+    console.log(travelTime);
+
+     let differenceInTime = travelTime - today;
+     let differenceInDays = differenceInTime/ (1000 * 3600 * 24); 
+     console.log(differenceInDays);
+     let countD = Math.round(differenceInDays);
     
     fetch('http://localhost:5050/addDate',{
         method:'POST',
@@ -37,18 +45,11 @@ function dateCount(e){
         mode:'cors',
         headers:{
             'Content-Type':'application/json',
-        },body:JSON.stringify({travelDate:travelDate})
+        },body:JSON.stringify({travelDate:travelDate, countD:countD})
     })
      .then(res=>res.json())
      .then(function(data){
-    let date2 = new Date(travelDate);
-     let travelTime = date2.getTime();
-      console.log(travelTime);
-
-     let differenceInTime = travelTime - today;
-     let differenceInDays = differenceInTime/ (1000 * 3600 * 24); 
-     console.log(differenceInDays);
-     let countD = Math.round(differenceInDays);
+    
 
      if(countD === 0){
      document.getElementById('countdown').innerHTML = "Your trip starts in a few hours!";
