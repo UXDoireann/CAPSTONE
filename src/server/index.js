@@ -75,7 +75,7 @@ app.post("/addData", async(req, res)=>{
 });
 
 //Post Request for date
-app.post('/addDate', addDate);
+/*app.post('/addDate', addDate);
 
 function addDate(req, res){
    let data = req.body;
@@ -86,11 +86,13 @@ function addDate(req, res){
    Object.assign(projectData, newEntry);
    res.send(projectData);
    console.log(projectData);
-    };
+    };*/
 
  //WeatherBit Fetch 
- app.post("/addWeather", async(req, res)=>{
-    const getWeather = await fetch(`${baseWeatherUrl}lat=${projectData.lat}&lon=${projectData.long}&days=${projectData.newEntry.days}&key=${apiKey}`,{
+ //app.post('/addDate', addDate)
+
+ app.post("/addDate", async(req, res)=>{
+    const getWeather = await fetch(`${baseWeatherUrl}lat=${projectData.lat}&lon=${projectData.long}&days=${req.body.countD}&key=${apiKey}`,{
         method: 'POST'
     });
     try{

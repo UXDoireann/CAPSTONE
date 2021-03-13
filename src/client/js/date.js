@@ -47,7 +47,7 @@ function dateCount(e){
         mode:'cors',
         headers:{
             'Content-Type':'application/json',
-        },body:JSON.stringify({travelDate:travelDate, countD:countD})
+        },body:JSON.stringify({countD:countD})
     })
      .then(res=>res.json())
      .then(function(data){
@@ -62,7 +62,7 @@ function dateCount(e){
          
      
 }
-     })
+     }).then
 
 
 }
