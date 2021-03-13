@@ -59,10 +59,18 @@ function dateCount(e){
          document.getElementById('countdown').innerHTML = "Just one day left!";
  }else if(countD>1){
              document.getElementById('countdown').innerHTML = countD+" days left to departure date."
-         
-     
 }
+
+let days = countD+1;
+
+document.getElementById('weather').innerHTML = data.data[days].weather.description;
+console.log(data.data[days].weather.description)
+document.getElementById('temp').innerHTML = data.data[days].max_temp + "°C";
+console.log(data.data[days].temp);
+document.getElementById('icon').innerHTML = data.data[days].weather.icon;
+console.log(data.data[days].weather.icon)
      }).then
+     
 
 
 }
