@@ -90,8 +90,10 @@ app.post("/addPic", async(req,res)=>{
         const data = await getPic.json();
         console.log(data);
         res.send(data);
+
     }catch(error){
-        console.log("error", error);
+        console.log("error", error)
+        res.send(null);
     }
 })
 
