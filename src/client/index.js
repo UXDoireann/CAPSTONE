@@ -1,13 +1,13 @@
 import{handleSubmit} from './js/form.js'
 import{dateCount} from './js/date.js'
-//import{postDate} from './js/date.js'
-//import{post} from './js/date.js'
+import{picture} from './js/picture.js'
+
 
 //Event Listener for Form Submission
 document.getElementById('dreams').addEventListener('click', handleSubmit);
 document.getElementById('get').addEventListener('click', dateCount);
-//document.getElementById('get').addEventListener('click', postDate);
-//document.getElementById('get').addEventListener('click', post);
+document.getElementById('dreams').addEventListener('click', picture);
+
 
 
 import './styles/card.scss'
@@ -84,5 +84,4 @@ import './media/icons/u00n.png'
 
 export{handleSubmit}
 export{dateCount}
-//export{postDate}
-//export{post}
+export{picture}

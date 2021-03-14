@@ -52,6 +52,12 @@ const apiKey = process.env.WEATHER_BIT_API;
 
 console.log(`Your WeatherBit API key is ${process.env.WEATHER_BIT_API}`);
 
+//Variables for Pixabay call
+let basePixabayUrl = 'http://pixabay.com/api/?key=';
+const pixKey = process.env.PIXABAY_KEY;
+
+console.log(`Your Pixabay API key is ${process.env.PIXABAY_KEY}`);
+
 //Object to hold GEONAMES data in
 projectData={};
 
@@ -74,22 +80,22 @@ app.post("/addData", async(req, res)=>{
 
 });
 
-//Post Request for date
-/*app.post('/addDate', addDate);
+//Pixabay fetch
 
-function addDate(req, res){
-   let data = req.body;
-   newEntry ={
-       date: data.travelDate,
-       days: data.countD
-       }
-   Object.assign(projectData, newEntry);
-   res.send(projectData);
-   console.log(projectData);
-    };*/
+app.post("/addPic", async(req,res)=>{
+    const getPic = await fetch(`${basePixabayUrl}${pixKey}&q=${req.body.formText}&image_type=photo`,{
+        method: 'POST'
+    });
+    try{
+        const data = await getPic.json();
+        console.log(data);
+        res.send(data);
+    }catch(error){
+        console.log("error", error);
+    }
+})
 
- //WeatherBit Fetch 
- //app.post('/addDate', addDate)
+//WeatherBit fetch
 
  app.post("/addDate", async(req, res)=>{
     const getWeather = await fetch(`${baseWeatherUrl}lat=${projectData.lat}&lon=${projectData.long}&days=${req.body.countD+2}&key=${apiKey}`,{
@@ -104,3 +110,4 @@ function addDate(req, res){
 }
 
 });
+
