@@ -80,7 +80,7 @@ import './media/icons/t05n.png'
 import './media/icons/u00d.png'
 import './media/icons/u00n.png'
 
-
+import './media/pixabay.png'
 
 export{handleSubmit}
 export{dateCount}
