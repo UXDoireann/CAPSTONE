@@ -8,7 +8,7 @@ import{restApi} from './js/rest.js'
 document.getElementById('dreams').addEventListener('click', handleSubmit);
 document.getElementById('get').addEventListener('click', dateCount);
 document.getElementById('dreams').addEventListener('click', picture);
-document.getElementById('get').addEventListener('click', restApi);
+document.getElementById('dreams').addEventListener('click', restApi);
 
 
 
