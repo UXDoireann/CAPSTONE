@@ -80,6 +80,20 @@ app.post("/addData", async(req, res)=>{
 
 });
 
+//REST Countries fetch
+app.post("/addRest", async(req,res)=>{
+    const getRest = await fetch(`https://restcountries.eu/rest/v2/name/${projectData.country}`,{
+        method: 'POST'
+    });
+    try{
+        const data = await getRest.json();
+        console.log(data);
+        res.send(data);
+    }catch(error){
+        console.log("error", error);
+    }
+});
+
 //Pixabay fetch
 
 app.post("/addPic", async(req,res)=>{
