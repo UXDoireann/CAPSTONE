@@ -16,11 +16,11 @@ fetch('http://localhost:5050/addPic', {
 })
 .then(res => res.json())
 .then(function(data) {
-    if(data == null){
+    if(data.totalHits == 0){
         document.querySelector('#city_pic').src = "https://pixabay.com/get/g7839be5011fa03e0b8bea44c1798eff78018d064ed3b4d07da719cf4ff1f945cad1517113b8461417f9f7478e62d8e81_640.jpg"
     }else{
-        document.querySelector('#city_pic').src=data.hits[1].webformatURL;
-        console.log(data.hits[1].webformatURL);
+        document.querySelector('#city_pic').src=data.hits[0].webformatURL;
+        console.log(data.hits[0].webformatURL);
         console.log(data);   
     }    
 })

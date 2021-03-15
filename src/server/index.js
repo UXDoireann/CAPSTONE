@@ -90,10 +90,20 @@ app.post("/addPic", async(req,res)=>{
         const data = await getPic.json();
         console.log(data);
         res.send(data);
+    
+   /* if(data.total == 0){
 
+        const getAltPic = await fetch(`${basePixabayUrl}${pixKey}&q=${projectData.country}&image_type=photo`,{
+            method:'POST'
+        })}
+       
+            const altData = await getAltPic.json();
+            console.log(altData);
+            res.send(altData);  */
+        
     }catch(error){
         console.log("error", error)
-        res.send(null);
+        res.send(error);
     }
 })
 
