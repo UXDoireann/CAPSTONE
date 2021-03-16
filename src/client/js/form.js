@@ -1,5 +1,8 @@
-import fetch from "node-fetch";
-import { dateCount } from "./date";
+//import e from "express";
+//import e from "express";
+import fetch from "node-fetch"
+
+import { dateCount } from "./date.js";
 
 
 //HandleSubmit Function
@@ -23,7 +26,27 @@ fetch('http://localhost:5050/addData', {
         const results = document.getElementById('results');
         results.innerHTML=data.country;   
         console.log(data);       
-})
+}).then (function() {restApi()
+}).then(function(){dateCount(e)})
+
 }
 
+
+function restApi(){
+console.log("Info Request")
+fetch('http://localhost:5050/addRest')
+.then(res => res.json())
+.then(function(data) {
+    
+        
+        console.log(data);   
+       
+})
+}
+   
+       
+
+
 export {handleSubmit}
+export {restApi}
+export {dateCount}
