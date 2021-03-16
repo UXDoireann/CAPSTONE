@@ -81,10 +81,8 @@ app.post("/addData", async(req, res)=>{
 });
 
 //REST Countries fetch
-app.post("/addRest", async(req,res)=>{
-    const getRest = await fetch(`https://restcountries.eu/rest/v2/name/${projectData.country}`,{
-        method: 'POST'
-    });
+app.get("/addRest", async(req,res)=>{
+    const getRest = await fetch(`https://restcountries.eu/rest/v2/name/${projectData.country}`);
     try{
         const data = await getRest.json();
         console.log(data);
