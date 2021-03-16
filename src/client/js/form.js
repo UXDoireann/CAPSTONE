@@ -22,7 +22,22 @@ fetch('http://localhost:5050/addData', {
         const results = document.getElementById('results');
         results.innerHTML=data.country;   
         console.log(data);       
+}).then (function() {restApi()
 })
+
 }
 
+const restApi = async()=>{
+const req = await fetch('/addRest');
+try{
+    const allRest = await req.json();
+    console.log(allRest);
+}catch(error){
+    console.log("No rest for the wicked")
+}
+   
+       
+};
+
 export {handleSubmit}
+export {restApi}

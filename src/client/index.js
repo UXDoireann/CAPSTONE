@@ -1,14 +1,14 @@
 import{handleSubmit} from './js/form.js'
 import{dateCount} from './js/date.js'
 import{picture} from './js/picture.js'
-import{restApi} from './js/rest.js'
+import{restApi} from './js/form.js'
 
 
 //Event Listener for Form Submission
 document.getElementById('dreams').addEventListener('click', handleSubmit);
 document.getElementById('get').addEventListener('click', dateCount);
 document.getElementById('dreams').addEventListener('click', picture);
-document.getElementById('get').addEventListener('click', restApi);
+//document.getElementById('get').addEventListener('click', restApi);
 
 
 
