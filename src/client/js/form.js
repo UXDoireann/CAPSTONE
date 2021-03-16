@@ -27,17 +27,21 @@ fetch('http://localhost:5050/addData', {
 
 }
 
-const restApi = async()=>{
-const req = await fetch('/addRest');
-try{
-    const allRest = await req.json();
-    console.log(allRest);
-}catch(error){
-    console.log("No rest for the wicked")
+
+function restApi(){
+console.log("Info Request")
+fetch('http://localhost:5050/addRest')
+.then(res => res.json())
+.then(function(data) {
+    
+        
+        console.log(data);   
+       
+})
 }
    
        
-};
+
 
 export {handleSubmit}
 export {restApi}
