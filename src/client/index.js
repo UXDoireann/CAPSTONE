@@ -5,9 +5,9 @@ import{restApi} from './js/form.js'
 
 
 //Event Listener for Form Submission
-document.getElementById('dreams').addEventListener('click', handleSubmit);
-document.getElementById('get').addEventListener('click', dateCount);
-document.getElementById('dreams').addEventListener('click', picture);
+document.getElementById('get').addEventListener('click', handleSubmit);
+//document.getElementById('get').addEventListener('click', dateCount);
+document.getElementById('get').addEventListener('click', picture);
 //document.getElementById('get').addEventListener('click', restApi);
 
 
