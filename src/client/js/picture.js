@@ -18,7 +18,7 @@ fetch('http://localhost:5050/addPic', {
 .then(res => res.json())
 .then(function(data) {
     if(data.totalHits == 0){
-        document.querySelector('#city_pic').src =  "../media/luggage.jpg";
+        document.getElementById('default').innerHTML = <img src ="./media/luggage.jpg"></img>;
         
     }else{
         document.querySelector('#city_pic').src=data.hits[0].webformatURL;
