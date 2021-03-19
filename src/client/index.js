@@ -1,5 +1,4 @@
 import{handleSubmit} from './js/form.js'
-import{dateCount} from './js/date.js'
 import{picture} from './js/picture.js'
 import{restApi} from './js/form.js'
 
@@ -83,8 +82,8 @@ import './media/icons/u00d.png'
 import './media/icons/u00n.png'
 
 import './media/pixabay.png'
+import './media/luggage.jpeg'
 
 export{handleSubmit}
-export{dateCount}
 export{picture}
 export{restApi}

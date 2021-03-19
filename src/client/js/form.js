@@ -24,9 +24,6 @@ fetch('http://localhost:5050/addData', {
 })
 .then(res => res.json())
 .then(function(data) {
-        const results = document.getElementById('results');
-        const country = data.country;
-        results.innerHTML=data.country;   
         console.log(data);       
 }).then (function() {restApi()
 }).then(function(){dateCount()})
@@ -39,8 +36,8 @@ console.log("Info Request")
 fetch('http://localhost:5050/addRest')
 .then(res => res.json())
 .then(function(data) {
-    document.getElementById('useful').innerHTML="Some useful information for your trip:";
-    document.getElementById('country').innerHTML=data[0].name +" ("+data[0].nativeName+")";
+   // document.getElementById('country').innerHTML=data[0].name +" ("+data[0].nativeName+")";
+    document.getElementById('useful').innerHTML="Some useful information for your trip to "+data[0].name+" ("+data[0].nativeName+")";
     document.getElementById('capital').innerHTML = "Capital: "+data[0].capital;
     document.getElementById('currency').innerHTML ="Currency: "+data[0].currencies[0].symbol+" ("+data[0].currencies[0].name+")";
     document.getElementById('language').innerHTML="Language(s): "+data[0].languages[0].name;
@@ -85,16 +82,26 @@ function dateCount(){
 }
 
 let days = countD+1;
+let dep = document.getElementById('date').value;
+/*dep=dep.split('-');
+
+let newDep = dep.getDate()+" "+dep.getMonth+1;
+let secondDay = countD+2;
+let thirdDay = countD+3;*/
+
+
+
 if(days>16){
-    document.getElementById('here').innerHTML="Your trip is too far away to get the weather forecast now.";
+    document.getElementById('here').innerHTML="Your trip is too far away to get the weather forecast now.<br> Check back again later!";
 }else{
-document.getElementById('here').innerHTML="Here's what the weather is looking like on your arrival date:"
+document.getElementById('here').innerHTML="Here's the weather for your arrival date:"
 document.getElementById('weather').innerHTML = data.data[days].weather.description;
 console.log(data.data[days].weather.description)
 document.getElementById('temp').innerHTML = data.data[days].max_temp + "°C";
 console.log(data.data[days].temp);
 document.getElementById('icon').innerHTML = `<img src="../media/icons/${data.data[days].weather.icon}.png" alt= "${data.data[days].weather.description}"></img>`
 console.log(data.data[days].weather.icon)
+//document.getElementById('depDate').innerHTML = newDep;
       }
      })
      
