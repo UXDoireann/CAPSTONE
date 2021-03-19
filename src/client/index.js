@@ -5,9 +5,7 @@ import{restApi} from './js/form.js'
 
 //Event Listener for Form Submission
 document.getElementById('get').addEventListener('click', handleSubmit);
-//document.getElementById('get').addEventListener('click', dateCount);
 document.getElementById('get').addEventListener('click', picture);
-//document.getElementById('get').addEventListener('click', restApi);
 
 
 
@@ -82,7 +80,7 @@ import './media/icons/u00d.png'
 import './media/icons/u00n.png'
 
 import './media/pixabay.png'
-import './media/luggage.jpeg'
+import './media/luggage.jpg'
 
 export{handleSubmit}
 export{picture}

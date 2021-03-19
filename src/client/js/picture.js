@@ -18,7 +18,7 @@ fetch('http://localhost:5050/addPic', {
 .then(res => res.json())
 .then(function(data) {
     if(data.totalHits == 0){
-        document.getElementById('default').innerHTML = <img src ="./media/luggage.jpg"></img>;
+        document.querySelector('#city_pic').src = "https://pixabay.com/get/g6453f22984f68e30c20149faf738d8252904018c04cf620263cb206076c77a3bd91f4d362e0ec5edd0403ab87ba9a349_640.jpg";
         
     }else{
         document.querySelector('#city_pic').src=data.hits[0].webformatURL;
