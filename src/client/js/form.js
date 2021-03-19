@@ -1,5 +1,3 @@
-//import e from "express";
-//import e from "express";
 import fetch from "node-fetch"
 
 // Create a new date instance dynamically with JS
@@ -27,6 +25,7 @@ fetch('http://localhost:5050/addData', {
 .then(res => res.json())
 .then(function(data) {
         const results = document.getElementById('results');
+        const country = data.country;
         results.innerHTML=data.country;   
         console.log(data);       
 }).then (function() {restApi()
@@ -34,19 +33,25 @@ fetch('http://localhost:5050/addData', {
 
 }
 
-
+//Rest Countries API
 function restApi(){
 console.log("Info Request")
 fetch('http://localhost:5050/addRest')
 .then(res => res.json())
 .then(function(data) {
-    
-        
+    document.getElementById('useful').innerHTML="Some useful information for your trip:";
+    document.getElementById('country').innerHTML=data[0].name +" ("+data[0].nativeName+")";
+    document.getElementById('capital').innerHTML = "Capital: "+data[0].capital;
+    document.getElementById('currency').innerHTML ="Currency: "+data[0].currencies[0].symbol+" ("+data[0].currencies[0].name+")";
+    document.getElementById('language').innerHTML="Language(s): "+data[0].languages[0].name;
+    document.getElementById('callC').innerHTML="International Calling Code: +"+data[0].callingCodes;
+    document.getElementById('timeZ').innerHTML="Timezone: "+data[0].timezones;   
         console.log(data);   
        
 })
 }
 
+//Countdown & WeatherBit API
 function dateCount(){
   
     let travelDate = document.getElementById("date").value;
@@ -72,11 +77,11 @@ function dateCount(){
     console.log(data.data);
 
      if(countD === 0){
-     document.getElementById('countdown').innerHTML = "Your trip starts in a few hours!";
+     document.getElementById('countdown').innerHTML = "In less than a day, you're on your way!";
  }else if(countD ===1){
-         document.getElementById('countdown').innerHTML = "Just one day left!";
+         document.getElementById('countdown').innerHTML = "Just one day left to your trip! ";
  }else if(countD>1){
-             document.getElementById('countdown').innerHTML = countD+" days left to departure date."
+             document.getElementById('countdown').innerHTML = countD+" days left to your departure date! "
 }
 
 let days = countD+1;
@@ -96,7 +101,7 @@ console.log(data.data[days].weather.icon)
    
        
 
-
+//Export functions
 export {handleSubmit}
 export {restApi}
 export {dateCount}
