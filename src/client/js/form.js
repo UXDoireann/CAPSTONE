@@ -85,13 +85,17 @@ function dateCount(){
 }
 
 let days = countD+1;
-
+if(days>16){
+    document.getElementById('here').innerHTML="Your trip is too far away to get the weather forecast now.";
+}else{
+document.getElementById('here').innerHTML="Here's what the weather is looking like on your arrival date:"
 document.getElementById('weather').innerHTML = data.data[days].weather.description;
 console.log(data.data[days].weather.description)
 document.getElementById('temp').innerHTML = data.data[days].max_temp + "°C";
 console.log(data.data[days].temp);
 document.getElementById('icon').innerHTML = `<img src="../media/icons/${data.data[days].weather.icon}.png" alt= "${data.data[days].weather.description}"></img>`
 console.log(data.data[days].weather.icon)
+      }
      })
      
 
