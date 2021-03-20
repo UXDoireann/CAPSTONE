@@ -40,7 +40,7 @@ fetch('http://localhost:5050/addRest')
     document.getElementById('country_info').style.boxShadow= "10px 20px 30px lightblue";
     document.getElementById('country_info').style.backgroundColor = "white";
     document.getElementById('country_info').style.borderRadius ="15px";
-    document.getElementById('useful').innerHTML="Some useful information for your trip to "+data[0].name+" ("+data[0].nativeName+")";
+    document.getElementById('useful').innerHTML="Info for your trip to "+data[0].name+" ("+data[0].nativeName+")";
     document.getElementById('useful').style.fontFamily ="Lobster, cursive";
     document.getElementById('useful').style.color = "rgb(56, 113, 236)";
     document.getElementById('capital').innerHTML = "Capital: "+data[0].capital;
@@ -92,9 +92,17 @@ let dep = document.getElementById('date').value;
 
 
 if(days>16){
+    document.getElementById('dayone').style.boxShadow= "10px 20px 30px lightblue";
+    document.getElementById('dayone').style.backgroundColor = "white";
+    document.getElementById('dayone').style.borderRadius ="15px";
     document.getElementById('here').innerHTML="Your trip is too far away to get the weather forecast now.<br> Check back again later!";
 }else{
-document.getElementById('here').innerHTML="Here's the weather for your arrival date:"
+    document.getElementById('dayone').style.boxShadow= "10px 20px 30px lightblue";
+    document.getElementById('dayone').style.backgroundColor = "white";
+    document.getElementById('dayone').style.borderRadius ="15px";  
+   document.getElementById('here').innerHTML="Weather forecast for your arrival:"
+   document.getElementById('here').style.fontFamily="Lobster, cursive";
+   document.getElementById('here').style.color="rgb(56, 113, 236)";
 document.getElementById('weather').innerHTML = data.data[days].weather.description;
 console.log(data.data[days].weather.description)
 document.getElementById('temp').innerHTML = data.data[days].max_temp + "°C";

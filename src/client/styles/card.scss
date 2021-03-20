@@ -15,6 +15,7 @@ $shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
 
 #city_pic{
     margin-top:13vh;
+    box-shadow: 10px 20px 30px lightblue;
 
 }
 
@@ -25,6 +26,22 @@ $shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
     padding-bottom:5px;
     padding-top:5px;
 
+}
+
+#useful, #country, #capital, #currency,
+#language, #callC, #timeZ{
+    margin-top:1vh;
+    margin-left:2vw;
+}
+
+#dayone{
+    font-family:$roboto;
+}
+
+#here, #weather, #icon, #temp{
+    margin-top:1vh;
+    margin-left:5vw;
+    margin-bottom:1vh;
 }
 
 
@@ -44,7 +61,25 @@ $shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
 #country_info{
     margin-left:5vw;
     width:90vw;
+    margin-top:2vh;
 }
+
+#useful{
+    font-size:7vw;
+    font-weight:bold;
+}
+
+#dayone{
+    width:90vw;
+    margin-left:5vw;
+}
+
+#here{
+    font-size:5vw;
+    font-weight:bold;
+}
+
+
 
 }
 
@@ -62,31 +97,74 @@ $shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
     }
 
     #country_info{
+        margin-top:2vh;
         margin-left:5vw;
         width:90vw;
-        font-size:1.5vw;
+        font-size:2vw;
+    }
+
+    #useful{
+        font-size:5vw;
+        font-weight:bold;
+    }
+
+    #dayone{
+        width:90vw;
+        margin-left:5vw;
+    }
+    
+    #here{
+        font-size:5vw;
+        font-weight:bold;
     }
 
 }
 
 @media(min-width:1200px){
 
-    
+    #grid{
+        display: grid;
+        grid-template-columns: 25vw 25vw 35vw;
+        grid-template-rows: 30vh 30vh;
+        grid-template-areas: 
+        "pic pic weather"
+        "pic pic info"
+       
+    }
 
     #city_pic{
         width:50vw;
         margin-left:5vw;
+        grid-area: "pic";
 
     }
 
     #countdown{
         font-size:3vw;
+       
     }
 
     #country_info{
-        width:35vw;
-        margin-left:5vw;
+        width:30vw;
+        margin-left:1vw;
         font-size:1vw;
+        grid-area: "info";
+    }
+
+    #useful{
+        font-size:1vw;
+        font-weight:bold;
+    }
+
+    #dayone{
+        width:30vw;
+        margin-left:1vw;
+        grid-area: "weather";
+    }
+    
+    #here{
+        font-size:1vw;
+        font-weight:bold;
     }
 
 }
