@@ -7,7 +7,7 @@ $shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
 #card{
     box-shadow:$shadow;
     border-radius: 15px;
-    background-color: rgba(248, 246, 246, 0.233);
+    background-color:white;
 
 }
 
@@ -62,6 +62,11 @@ button{
 
 @media(max-width:599px){
 
+    body{
+        background-image:url("../media/mobilebackground.jpg") ;
+        background-size:cover;
+    }
+
 #when, #where{
         margin-left:7vw;
         font-size:7vw;
@@ -113,7 +118,122 @@ button{
 }
 
 @media(min-width:600px)and(max-width:1199px){
+
+    body{
+        background-image: url("../media/ipadbackground.jpg");
+        background-size:cover;
+    }
+
+    #when, #where{
+        margin-left:12vw;
+        font-size:7vw;
+        
+        
+}
+
+#where{
+    
+    padding-top:5px;
+    margin-top: 15vh;
+}
+
+#when{
+    margin-top: 5px;
+    margin-bottom:5px;
+}
+
+#date{
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:5px;
+    padding-right:5px;
+    width: 70vw;
+}
+
+#city{
+    padding-top:7px;
+    padding-bottom:7px;
+    padding-left:7px;
+    padding-right:7px;
+    width: 70vw;
+
+}
+
+button{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 73vw;
+    margin-left: 0vw;
+}
+
+#card{
+    margin-top: 15px;
+    padding-bottom:10px;
+    margin-left:10px;
+    
+}
 }
 
 @media(min-width:1200px){
+
+    body{
+        background-image: url("../media/desktopbackground.jpg");
+        background-size: cover;
+    }
+
+    #when, #where{
+        margin-left:5px;
+        font-size:3vw;
+        
+        
+}
+
+#where{
+    
+    padding-top:5px;
+    margin-top: 15vh;
+    padding-left:10px;
+}
+
+#when{
+    margin-top: 5px;
+    margin-bottom:5px;
+    padding-left:10px;
+}
+
+#date{
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:7px;
+    padding-right:7px;
+    width: 38vw;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+#city{
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:7px;
+    padding-right:7px;
+    width: 38vw;
+    margin-left: 7px;
+    margin-right: 7px;
+
+}
+
+button{
+    margin-top: 15px;
+    width: 39vw;
+    margin-left: 7px;
+    margin-right:7px;
+}
+
+#card{
+    margin-top: 15px;
+    padding-bottom:10px;
+    margin-left:20px;
+    margin-right:20px;
+    width:fit-content;
+}
 }

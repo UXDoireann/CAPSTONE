@@ -81,6 +81,9 @@ import './media/icons/u00n.png'
 
 import './media/pixabay.png'
 import './media/luggage.jpg'
+import './media/mobilebackground.jpg'
+import './media/ipadbackground.jpg'
+import './media/desktopbackground.jpg'
 
 export{handleSubmit}
 export{picture}
