@@ -1,4 +1,59 @@
+$primary: rgb(56, 113, 236);
+$accent: rgb(137, 209, 231);
+
+
+
+body{
+    margin-top:0px;
+    margin-left:0px;
+    
+}
 
 header{
-    background-color: aquamarine;
+    background-color:$primary;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+             float:left;
+            width:100vw;
+           
+
+}
+
+h1{
+    
+    font-family: 'Lobster', cursive;
+    color:white;
+    padding-top:1px;
+    padding-bottom:1px;
+    margin-top:0px;
+    margin-bottom: 2px;
+}
+
+@media(max-width:599px){
+    
+    h1{
+        padding-left:30vw;
+        font-size:5vh;
+       
+
+    }
+}
+
+@media(min-width:600px)and(max-width:1199px){
+
+    h1{
+        padding-left:30vw;
+        font-size:7vh;
+        
+    }
+
+}
+
+@media(min-width:1200px){
+
+  h1{  padding-left: 40vw;
+    font-size:7vh;
+   
+  }
 }

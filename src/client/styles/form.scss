@@ -1,0 +1,119 @@
+
+$roboto:  'Roboto', sans-serif;
+$primary: rgb(56, 113, 236);
+$accent: rgb(48, 104, 114);
+$shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
+
+#card{
+    box-shadow:$shadow;
+    border-radius: 15px;
+    background-color: rgba(248, 246, 246, 0.233);
+
+}
+
+
+
+#when, #where{
+    font-family:  'Lobster', cursive;
+    color:$accent;
+    
+}
+
+#date{
+    box-shadow: $shadow;
+    border-style: none;
+    border-radius:15px;
+    font-family: $roboto;
+    font-style:italic;
+    margin-left: 3w;
+    color:rgb(79, 81, 82);
+    
+}
+
+#city{
+    box-shadow: $shadow;
+    border-style: none;
+    border-radius:15px;
+    font-family: $roboto;
+    font-style:italic;
+    margin-left: 3w;
+    color: $accent;
+   
+
+}
+
+button{
+    font-family:$roboto;
+    border-radius:15px;
+    padding-top:10px;
+    padding-bottom:10px;
+    font-size:3vh;
+    margin-top:5vh;
+    box-shadow:$shadow;
+    margin-left:3vw;
+    border-style:none;
+    background-color: $primary;
+    color:white;
+    font-weight: bold;
+   
+}
+
+
+
+@media(max-width:599px){
+
+#when, #where{
+        margin-left:7vw;
+        font-size:7vw;
+        
+        
+}
+
+#where{
+    
+    padding-top:5px;
+    margin-top: 15vh;
+}
+
+#when{
+    margin-top: 5px;
+    margin-bottom:5px;
+}
+
+#date{
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:5px;
+    padding-right:5px;
+    width: 70vw;
+}
+
+#city{
+    padding-top:7px;
+    padding-bottom:7px;
+    padding-left:7px;
+    padding-right:7px;
+    width: 70vw;
+
+}
+
+button{
+    margin-top: 15px;
+    width: 73vw;
+    margin-left: 0vw;
+}
+
+#card{
+    margin-top: 15px;
+    padding-bottom:10px;
+    margin-left:10px;
+    margin-right:5px;
+}
+
+}
+
+@media(min-width:600px)and(max-width:1199px){
+}
+
+@media(min-width:1200px){
+}
