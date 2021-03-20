@@ -24,6 +24,7 @@ fetch('http://localhost:5050/addData', {
 })
 .then(res => res.json())
 .then(function(data) {
+
         console.log(data);       
 }).then (function() {restApi()
 }).then(function(){dateCount()})
@@ -36,8 +37,12 @@ console.log("Info Request")
 fetch('http://localhost:5050/addRest')
 .then(res => res.json())
 .then(function(data) {
-   // document.getElementById('country').innerHTML=data[0].name +" ("+data[0].nativeName+")";
+    document.getElementById('country_info').style.boxShadow= "10px 20px 30px lightblue";
+    document.getElementById('country_info').style.backgroundColor = "white";
+    document.getElementById('country_info').style.borderRadius ="15px";
     document.getElementById('useful').innerHTML="Some useful information for your trip to "+data[0].name+" ("+data[0].nativeName+")";
+    document.getElementById('useful').style.fontFamily ="Lobster, cursive";
+    document.getElementById('useful').style.color = "rgb(56, 113, 236)";
     document.getElementById('capital').innerHTML = "Capital: "+data[0].capital;
     document.getElementById('currency').innerHTML ="Currency: "+data[0].currencies[0].symbol+" ("+data[0].currencies[0].name+")";
     document.getElementById('language').innerHTML="Language(s): "+data[0].languages[0].name;
@@ -74,21 +79,16 @@ function dateCount(){
     console.log(data.data);
 
      if(countD === 0){
+         let city = document.getElementById('city').value;
      document.getElementById('countdown').innerHTML = "In less than a day, you're on your way!";
  }else if(countD ===1){
-         document.getElementById('countdown').innerHTML = "Just one day left to your trip! ";
+         document.getElementById('countdown').innerHTML = "Just one day left to your trip!";
  }else if(countD>1){
-             document.getElementById('countdown').innerHTML = countD+" days left to your departure date! "
+             document.getElementById('countdown').innerHTML = countD+" days left to your trip!";
 }
 
 let days = countD+1;
 let dep = document.getElementById('date').value;
-/*dep=dep.split('-');
-
-let newDep = dep.getDate()+" "+dep.getMonth+1;
-let secondDay = countD+2;
-let thirdDay = countD+3;*/
-
 
 
 if(days>16){

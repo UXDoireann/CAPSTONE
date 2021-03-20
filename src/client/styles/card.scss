@@ -1,0 +1,92 @@
+
+$roboto:  'Roboto', sans-serif;
+$primary: rgb(56, 113, 236);
+$accent: rgb(48, 104, 114);
+$shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
+
+
+
+#countdown{
+    color:$accent;
+    font-family:'Lobster', cursive;
+    margin-left:6vw;
+}
+
+
+#city_pic{
+    margin-top:13vh;
+
+}
+
+#country_info{
+    font-family:$roboto;
+    padding-left: 5px;
+    padding-right:5px;
+    padding-bottom:5px;
+    padding-top:5px;
+
+}
+
+
+@media(max-width:599px){
+
+#city_pic{
+    width:90vw;
+    margin-left:5vw;
+}
+
+
+
+#countdown{
+    font-size:7vw;
+}
+
+#country_info{
+    margin-left:5vw;
+    width:90vw;
+}
+
+}
+
+@media(min-width:600px)and(max-width:1199px){
+
+    
+
+    #city_pic{
+        width:90vw;
+        margin-left:5vw;
+    }
+
+    #countdown{
+        font-size:5vw;
+    }
+
+    #country_info{
+        margin-left:5vw;
+        width:90vw;
+        font-size:1.5vw;
+    }
+
+}
+
+@media(min-width:1200px){
+
+    
+
+    #city_pic{
+        width:50vw;
+        margin-left:5vw;
+
+    }
+
+    #countdown{
+        font-size:3vw;
+    }
+
+    #country_info{
+        width:35vw;
+        margin-left:5vw;
+        font-size:1vw;
+    }
+
+}
