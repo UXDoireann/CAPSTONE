@@ -2,8 +2,8 @@ $primary: rgb(56, 113, 236);
 $roboto:  'Roboto', sans-serif;
 
 footer{
-    background-color: $primary;
-    color:white;
+   // background-color: $primary;
+    color:$primary;
     font-family: $roboto;
    
    bottom: 0;

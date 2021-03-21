@@ -63,8 +63,10 @@ button{
 @media(max-width:599px){
 
     body{
-       //background-image:url("../media/mobilebackground.jpg") ;
-        background-size:cover;
+       background-image:url("../media/mobilebackground.jpg") ;
+        background-size:contain;
+        background-repeat:no-repeat;
+
     }
 
 #when, #where{
@@ -120,7 +122,7 @@ button{
 @media(min-width:600px)and(max-width:1199px){
 
     body{
-        //background-image: url("../media/ipadbackground.jpg");
+        background-image: url("../media/ipadbackground.jpg");
         background-size:cover;
     }
 
@@ -179,8 +181,13 @@ button{
 @media(min-width:1200px){
 
     body{
-       // background-image: url("../media/desktopbackground.jpg");
-        background-size: cover;
+        background-image: url("../media/desktopbackground.jpg");
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: 800px 300px ;
+        
+       
+
     }
 
     #when, #where{
