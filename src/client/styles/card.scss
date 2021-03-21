@@ -13,11 +13,11 @@ $shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
 }
 
 
-#city_pic{
-    margin-top:13vh;
-    box-shadow: 10px 20px 30px lightblue;
+//#city_pic{
+ //   margin-top:13vh;
+   // box-shadow: 10px 20px 30px lightblue;
 
-}
+//}
 
 #country_info{
     font-family:$roboto;
@@ -38,7 +38,7 @@ $shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
     font-family:$roboto;
 }
 
-#here, #weather, #icon, #temp{
+#weather, #icon, #temp{
     margin-top:1vh;
     margin-left:5vw;
     margin-bottom:1vh;
@@ -50,6 +50,7 @@ $shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
 #city_pic{
     width:90vw;
     margin-left:5vw;
+   // margin-top:13vh;
 }
 
 
@@ -90,6 +91,7 @@ $shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
     #city_pic{
         width:90vw;
         margin-left:5vw;
+        //margin-top:13vh;
     }
 
     #countdown{
@@ -122,48 +124,85 @@ $shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
 
 @media(min-width:1200px){
 
-    #grid{
-        display: grid;
-        grid-template-columns: 25vw 25vw 35vw;
-        grid-template-rows: 30vh 30vh;
-        grid-template-areas: 
-        "pic pic weather"
-        "pic pic info"
+    .container{
+    
+       display: grid;
+       width:95vw;
+       height:85vh;
+       margin-top:5vh;
+       grid-template-columns:30vw 45vw 25vw;
+       grid-template-rows: auto;
+       grid-template-areas: 
+       "form img info";
        
-    }
+       }
+
+  //  #card{
+  //     grid-area:"card";
+
+   // }
+
+   #col_one{
+       //display:flex;
+      // flex-direction: column;
+       grid-area:form;
+   }
+
+  
+
+  
 
     #city_pic{
-        width:50vw;
-        margin-left:5vw;
-        grid-area: "pic";
+        width:43vw;
+       // grid-area: img;
+        margin-top:10vh;
+   
 
+    }
+
+    #image{
+        grid-area: img;
     }
 
     #countdown{
         font-size:3vw;
+        margin-left:1vw;
+       // grid-area: "days";
        
     }
 
+    #col_three{
+        display:flex;
+        flex-direction: column;
+        grid-area:info;
+        margin-top: 13vh;
+    }
+
     #country_info{
-        width:30vw;
-        margin-left:1vw;
+        width:20vw;
+        margin-top:1vh;
+       
+       // margin-right:1vw;
         font-size:1vw;
-        grid-area: "info";
+      //  grid-area: "info";
     }
 
     #useful{
-        font-size:1vw;
+        font-size:2vw;
         font-weight:bold;
     }
 
     #dayone{
-        width:30vw;
-        margin-left:1vw;
-        grid-area: "weather";
+        width:18vw;
+       
+        //margin-right:1vw;
+       // grid-area: "weather";
     }
     
     #here{
-        font-size:1vw;
+        margin-left:1vw;
+        margin-top:1vh;
+        font-size:2vw;
         font-weight:bold;
     }
 
