@@ -2,7 +2,7 @@
 $roboto:  'Roboto', sans-serif;
 $primary: rgb(56, 113, 236);
 $accent: rgb(48, 104, 114);
-$shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
+$shadow:10px 20px 30px lightblue;
 
 
 
@@ -11,13 +11,6 @@ $shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
     font-family:'Lobster', cursive;
     margin-left:6vw;
 }
-
-
-//#city_pic{
- //   margin-top:13vh;
-   // box-shadow: 10px 20px 30px lightblue;
-
-//}
 
 #country_info{
     font-family:$roboto;
@@ -50,13 +43,14 @@ $shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
 #city_pic{
     width:90vw;
     margin-left:5vw;
-   // margin-top:13vh;
+    margin-top:2vh;
 }
 
 
 
 #countdown{
     font-size:7vw;
+    margin-top:1vh;
 }
 
 #country_info{
@@ -66,18 +60,20 @@ $shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
 }
 
 #useful{
-    font-size:7vw;
+    font-size:5vw;
     font-weight:bold;
 }
 
 #dayone{
     width:90vw;
     margin-left:5vw;
+    margin-top:2vh;
 }
 
 #here{
     font-size:5vw;
     font-weight:bold;
+    margin-top:1vh;
 }
 
 
@@ -91,11 +87,12 @@ $shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
     #city_pic{
         width:90vw;
         margin-left:5vw;
-        //margin-top:13vh;
+        margin-top:2vh;
     }
 
     #countdown{
         font-size:5vw;
+        margin-top:1vh;
     }
 
     #country_info{
@@ -113,6 +110,7 @@ $shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
     #dayone{
         width:90vw;
         margin-left:5vw;
+        margin-top:2vh;
     }
     
     #here{
@@ -137,27 +135,13 @@ $shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
        
        }
 
-  //  #card{
-  //     grid-area:"card";
-
-   // }
-
    #col_one{
-       //display:flex;
-      // flex-direction: column;
        grid-area:form;
    }
 
-  
-
-  
-
     #city_pic{
         width:43vw;
-       // grid-area: img;
-        margin-top:10vh;
-   
-
+        margin-top:12vh;
     }
 
     #image{
@@ -166,9 +150,7 @@ $shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
 
     #countdown{
         font-size:3vw;
-        margin-left:1vw;
-       // grid-area: "days";
-       
+        margin-left:1vw;   
     }
 
     #col_three{
@@ -181,10 +163,7 @@ $shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
     #country_info{
         width:20vw;
         margin-top:1vh;
-       
-       // margin-right:1vw;
         font-size:1vw;
-      //  grid-area: "info";
     }
 
     #useful{
@@ -195,8 +174,6 @@ $shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 13px 0 rgba(0,0,0,0.19);
     #dayone{
         width:18vw;
        
-        //margin-right:1vw;
-       // grid-area: "weather";
     }
     
     #here{
