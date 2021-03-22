@@ -1,3 +1,5 @@
+import 'regenerator-runtime/runtime';
+
 import{handleSubmit} from './js/form.js'
 import{picture} from './js/picture.js'
 import{restApi} from './js/form.js'

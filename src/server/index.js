@@ -28,6 +28,9 @@ function listening(){
     console.log(`running on localhost:${port}`);
 };
 
+
+
+
 //Other dependencies
 var path = require('path');
 const fetch = require('node-fetch');
@@ -80,6 +83,8 @@ app.post("/addData", async(req, res)=>{
 
 });
 
+
+
 //REST Countries fetch
 app.get("/addRest", async(req,res)=>{
     const getRest = await fetch(`https://restcountries.eu/rest/v2/name/${projectData.country}`);
@@ -124,3 +129,10 @@ app.post("/addPic", async(req,res)=>{
 
 });
 
+
+//Run jest test
+app.get('/test', async (req, res) => {
+    res.json({message: 'pass!'})
+  })
+  
+module.exports={app}
