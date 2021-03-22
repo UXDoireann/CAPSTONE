@@ -1,10 +1,10 @@
-/**UDACITY FRONT-END DEVELOPMENT CAPSTONE PROJECT**
+**UDACITY FRONT-END DEVELOPMENT CAPSTONE PROJECT**
 
-//**Travel App **
+**Travel App **
 This travel app allows users to enter their destination city and departure date.
 It then displays the weather forecast for their arrival date, information about the destination country and an image.
 
-///**Key Project Tasks**
+**Key Project Tasks**
 - Use GeoNames.org API to fetch location data of entered city
 
 - Use Weatherbit.io API to get weather for arrival date with icons
@@ -17,7 +17,7 @@ It then displays the weather forecast for their arrival date, information about 
 
 - Install service workers
 
-///**Instructions**
+**Instructions**
 - git clone this repo
 
 - Install npm
@@ -29,5 +29,5 @@ It then displays the weather forecast for their arrival date, information about 
 
 - Go to http://localhost:5050/
 
-////Illustration
+**Illustration**
 UI illustration made by UXDoireann 
