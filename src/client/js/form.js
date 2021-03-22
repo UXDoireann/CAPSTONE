@@ -109,7 +109,7 @@ document.getElementById('temp').innerHTML = data.data[days].max_temp + "°C";
 console.log(data.data[days].temp);
 document.getElementById('icon').innerHTML = `<img src="../media/icons/${data.data[days].weather.icon}.png" alt= "${data.data[days].weather.description}"></img>`
 console.log(data.data[days].weather.icon)
-//document.getElementById('depDate').innerHTML = newDep;
+
       }
      })
      
