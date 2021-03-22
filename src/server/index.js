@@ -62,7 +62,7 @@ const pixKey = process.env.PIXABAY_KEY;
 console.log(`Your Pixabay API key is ${process.env.PIXABAY_KEY}`);
 
 //Object to hold GEONAMES data in
-projectData={};
+let projectData={};
 
 //GEONAMES fetch request
 app.post("/addData", async(req, res)=>{

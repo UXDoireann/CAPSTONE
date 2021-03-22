@@ -87,7 +87,13 @@
             2021 by Doireann Ni Ghrioghair
         </footer>
         </div>
-        
+        <script>
+            if('serviceWorker' in navigator){
+                window.addEventListener('load', () =>{
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
     </body>
    
 </html>
