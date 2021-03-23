@@ -17,6 +17,11 @@ It then displays the weather forecast for their arrival date, information about 
 
 - Install service workers
 
+**Extras**
+- Display icons for retrieved weather data
+
+- Use RestCountries API to fetch country info of destination
+
 **Instructions**
 - git clone this repo
 
