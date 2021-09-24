@@ -1,6 +1,6 @@
 **UDACITY FRONT-END DEVELOPMENT CAPSTONE PROJECT**
 
-**Travel App **
+**Travel App**
 This travel app allows users to enter their destination city and departure date.
 It then displays the weather forecast for their arrival date, information about the destination country and an image.
 
