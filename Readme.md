@@ -31,6 +31,8 @@ It then displays the weather forecast for their arrival date, information about 
   Write them in an .env file, giving them matching names to those in the server/index.js file
 
  - In the terminal, run: npm run build-prod
+ 
+ - In the terminal, run: npm start
 
 - Go to http://localhost:5050/
 
